@@ -23,17 +23,23 @@ $(function(){
 
 $(function(){
 	  $.getJSON( "assets/json/carousel-data.json", function( data ) {
-	  var item = [];
+
 	  var itemIindicator = [];
+	  var item = [];
 
 	  $.each( data, function( key, val ) {
-	    itemIindicator.push( '<li data-target="#carousel" data-slide-to="'+ key +'"></li>' );
-	    item.push( '<li data-target="#carousel" data-slide-to="'+ key +'"></li>' );
+	  	if(key === 0){
+	  	var active = 'active';
+	  	}else{
+	  		active = '';
+	  	}
+	    itemIindicator.push( "<li data-target='#carousel' data-slide-to='"+ key +"'></li>" );
+	    item.push("<div class='item "+ active + "'><img src='"+ data[key].image +"' alt='"+ data[key].heading +"' /><div class='carousel-caption'><h3>"+ data[key].heading +"</h3><p>"+ data[key].text +"</p></div></div>");
 	  });
-	 
-	  $( "<ul/>", {
-	    "class": "my-new-list",
-	    html: items.join( "" )
-	  }).appendTo( "#test" );
+
+	  $('#carousel .carousel-indicators').html(itemIindicator.join(""));
+	  $('#carousel .carousel-inner').html(item.join(""));
+	  $('#carousel').carousel();	  
 	});
+
 });

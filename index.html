@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>Home</title>
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+	<link rel="stylesheet" href="assets/css/app.min.css" title="blue">
+</head>
+<body>
+	<header>
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-3">
+					<div class="navbar-header">
+						<a href="/">
+							<img src="logo" alt="Logo" />
+						</a>
+					</div>	
+				</div>
+				<div class="col-xs-9">	
+					<nav>
+						<ul class="nav navbar-nav navbar-right xs-mb-menu hidden-xs" data-mb-menu="#xs-top-menu">
+							<li class="active"><a href="home">Home</a></li>
+							<li><a href="about-us">About Us</a></li>
+							<li><a href="projects">Projects</a></li>
+							<li><a href="contact-us">Contact Us</a></li>
+						</ul>
+						<select id="xs-top-menu" class="hidden-sm hidden-md hidden-lg form-control xs-mb-select"></select>
+					</nav>	
+				</div>	
+			</div>	
+		</div>	
+	</header>		
+	<div class="container">
+		<div class="row">
+			<h1 class="col-sm-12">Contact Us</h1>
+		</div>	
+		<div class="row">		
+			<div class="col-sm-3">
+				<div id="carousel" data-ride="carousel">
+					  <!-- Indicators -->
+					  <ol class="carousel-indicators">
+					  </ol>
+					  <!-- Wrapper for slides -->
+					  <div class="carousel-inner" role="listbox">
+					  </div>
+				</div>
+			</div>	
+			<div class="col-sm-9">
+				<p></p>
+				<p id="form-status" class="info-box">
+					Form Submitted Successfullt.
+				</p>
+				<div class="row">
+					<div class="col-sm-6">
+						<form>
+							<div class="form-group">
+								<input type="text" class="form-control" id="fNamelName" placeholder="Firstname Lastname" />
+							</div>
+							<div class="form-group">
+								<input type="password" class="form-control" id="password" placeholder="Password" />
+							</div>
+							<div class="form-group">
+								<input type="password" class="form-control" id="repassword" placeholder="Confirl Password" />
+							</div>
+							<div class="form-group">
+								<input type="text" class="form-control" id="email" placeholder="Email" />
+							</div>
+							<div class="form-group">
+								<input type="text" class="form-control" id="website" placeholder="Website" />
+							</div>
+							<div class="text-right">
+			          			<button type="submit" class="btn btn-default">Submit</button>
+							</div>
+						</form>
+					</div>	
+					<div class="col-sm-6">
+						<h6>Business Unit</h6>
+						<ul class="tree-items bg-light-pink border-gray">
+							<li> Text-1
+								<ul>
+									<li>Sub-Test-1</li>
+									<li>Sub-Test-2</li>
+									<li>Sub-Test-3</li>
+									<li>Sub-Test-4</li>																		
+								</ul>	
+							</li>	
+						</ul>
+					</div>	
+				</div>	
+			</div>	
+		</div>	
+	</div>	
+	<script src="assets/js/app.min.js"></script>   
+	<script src="dev/js/custom.js"></script>   
+</body>
+</html>
+
+

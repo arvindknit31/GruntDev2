@@ -39,8 +39,7 @@ grunt.initConfig({
       files: {
         '<%= pkg.assets %>/js/app.min.js': [
           '<%= pkg.dev %>/js/jquery-1.11.3.min.js', 
-          '<%= pkg.dev %>/js/bootstrap.js',
-          '<%= pkg.dev %>/js/custom.js'
+          '<%= pkg.dev %>/js/bootstrap.js'
         ]
       }
     }
