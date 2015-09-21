@@ -43,3 +43,22 @@ $(function(){
 	});
 
 });
+
+var keyArr = ['[+arvind+]','[+kumar+]'];
+var valArr = ['Arvind','Kumar'];
+var dataString = 'My name is: [+arvind+] [+kumar+].';
+
+String.prototype.tplToString = function (keyArr,valArr){
+	if(keyArr.length === valArr.length){
+		var dataString = this;
+		var length = keyArr.length;
+		for(var i=0; i<length; i++){
+			dataString = dataString.split(keyArr[i]).join(valArr[i]);
+		}
+	}else{
+		alert('Both array should be of equal length.')
+	}
+	return dataString;	
+};
+
+var dataVal = dataString.tplToString(keyArr,valArr);
